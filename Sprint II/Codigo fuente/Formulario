@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container section">
+        <form>
+            <!-- fila 1 -->
+            <div class="row center">
+                <!-- s: pantalla pequeña
+                     m: pantalla mediana
+                     g: pantalla grande -->
+                <div class="input-field col -s12 m12 l12">
+                    <input type="text" name="user_name" id="user_name">
+                    <label for="">Nombre completo</label>
+                </div>
+            </div>
+
+            <!-- comentario con shift + alt + a -->
+            <!-- fila 2 -->
+            <div class="row center">
+            <div class="input-field col -s6 m6 l6"><input type="text" name="cycle_name" id="cycle_name"><label for="cycle_name">Nombre ciclo</label></div>
+            <div class="input-field col -s6 m6 l6"><input type="text" name="university" id="university"><label for="university">Universidad</label></div>
+            </div>
+        </form>
+
+
+    </div>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>
