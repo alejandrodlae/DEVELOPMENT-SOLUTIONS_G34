@@ -1,0 +1,20 @@
+@page "/Movies/edit/{Id:int}"
+
+<FormMovie OnValidSubmit= "Edit" Movie="Movie"></FormMovie>
+@code{
+    [Parameter] public int Id {get;set;}
+    private Movie Movie;
+    protected override void OnInitialized (){
+        Movie = new Movie(){Id =Id, MovieName="Jungle Cruise" , Genre="accion",
+        Synopsis="Descripcion de la pelicula", Raiting = "4", Image="Images/Movie1.jpg"};
+    }
+
+    private void Edit(){
+        Console.WriteLine($"Id: {Movie.Id}");
+        Console.WriteLine($"Nombre: {Movie.MovieName}");
+        Console.WriteLine($"Genero: {Movie.Genre}");
+        Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
+        Console.WriteLine($"Calificacion: {Movie.Raiting}");
+        
+    }
+}

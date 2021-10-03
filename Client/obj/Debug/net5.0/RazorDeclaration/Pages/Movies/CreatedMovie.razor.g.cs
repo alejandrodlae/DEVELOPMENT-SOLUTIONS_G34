@@ -104,6 +104,26 @@ using Sprint3.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 6 "C:\Sprint3\Client\Pages\Movies\CreatedMovie.razor"
+      
+   private Movie Movie = new Movie();
+   private  void Create(){
+      Console.WriteLine($"Nombre de la pelicula: {Movie.MovieName}");
+      Console.WriteLine($"Genero: {Movie.Genre}");
+      Console.WriteLine($"Sinopsis  : {Movie.Synopsis}");
+      Console.WriteLine($"Calificacion: {Movie.Raiting}");
+      Console.WriteLine($"Imagen: {Movie.Image}");
+
+   }
+
+
+  
+  
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

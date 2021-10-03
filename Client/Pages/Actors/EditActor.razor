@@ -1,0 +1,19 @@
+@page "/Actor/edit/{Id:int}"
+<h1 class="display-4">Editar Actor</h1>
+<FormActor OnValidSubmit= "Edit" Actor="Actor"></FormActor>
+@code{
+    [Parameter] public int Id {get;set;}
+    private Actor Actor;
+    protected override void OnInitialized (){
+        Actor = new Actor(){Id =Id, ActorName="Dave Bautista" , 
+        Nationality="Ingles", Biography = "Biografia"};
+    }
+
+    private void Edit(){
+        Console.WriteLine($"Id: {Actor.Id}");
+        Console.WriteLine($"Nombre: {Actor.ActorName}");
+        Console.WriteLine($"Sinopsis: {Actor.Nationality}");
+        Console.WriteLine($"Calificacion: {Actor.Biography}");
+        
+    }
+}

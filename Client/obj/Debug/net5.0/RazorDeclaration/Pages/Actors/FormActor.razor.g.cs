@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Sprint3.Client.Pages.GenreMovie
+namespace Sprint3.Client.Pages.Actors
 {
     #line hidden
     using System;
@@ -96,14 +96,22 @@ using Sprint3.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Genre/created")]
-    public partial class CreatedGenre : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class FormActor : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 38 "C:\Sprint3\Client\Pages\Actors\FormActor.razor"
+      
+[Parameter] public Actor Actor{get;set;}
+[Parameter] public EventCallback OnValidSubmit{get;set;}
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

@@ -104,7 +104,7 @@ using Sprint3.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Sprint3\Client\Pages\Components\CardActorsComponent.Razor"
+#line 29 "C:\Sprint3\Client\Pages\Components\CardActorsComponent.Razor"
       
     [Parameter] public List<Actor> Actors { get; set; }
 

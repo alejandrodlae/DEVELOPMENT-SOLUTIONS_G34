@@ -96,7 +96,7 @@ using Sprint3.Client.Services;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movie/show")]
     public partial class ShowMovie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

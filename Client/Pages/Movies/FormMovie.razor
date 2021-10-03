@@ -1,0 +1,51 @@
+<EditForm Model ="Movie" OnValidSubmit="OnValidSubmit">
+   <DataAnnotationsValidator></DataAnnotationsValidator>
+   <div class="jumbotron">
+   <div class="form-group">
+      <label class="form-label">
+         Pelicula
+      </label>
+      <div class="mb-3">
+         <InputText class="form-control" @bind-Value="@Movie.MovieName"></InputText>
+         <ValidationMessage For="@(()=>Movie.MovieName)"></ValidationMessage>
+      </div>
+
+      <label class="form-label">
+         Genero
+      </label>
+      <div class="mb-3">
+         <InputText class="form-control" @bind-Value="@Movie.Genre"></InputText>
+         <ValidationMessage For="@(()=>Movie.Genre)"></ValidationMessage>
+      </div>
+
+      <label class="form-label">
+         Sinopsis
+      </label>
+      <div class="mb-3">
+         <InputText class="form-control" @bind-Value="@Movie.Synopsis"></InputText>
+         <ValidationMessage For="@(()=>Movie.Synopsis)"></ValidationMessage>
+      </div>
+      
+      <label class="form-label">
+         Raiting
+      </label>
+      <div class="mb-3">
+         <InputText class="form-control" @bind-Value="@Movie.Raiting"></InputText>
+         <ValidationMessage For="@(()=>Movie.Raiting)"></ValidationMessage>
+      </div>
+
+      <a>
+        <img src="@Movie.Image" alt="" width="225px" height="300px" />
+     </a>
+
+      </div>
+   </div>
+   <div class ="mb-3">
+      <button type="submit" class="btn btn-success">Guardar</button>
+   </div>
+</EditForm>
+
+@code{
+[Parameter] public Movie Movie{get;set;}
+[Parameter] public EventCallback OnValidSubmit{get;set;}
+}

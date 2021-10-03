@@ -96,6 +96,7 @@ using Sprint3.Client.Services;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/actor/create")]
     public partial class CreatedActor : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -103,6 +104,20 @@ using Sprint3.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 6 "C:\Sprint3\Client\Pages\Actors\CreatedActor.razor"
+      
+   private Actor Actor = new Actor();
+   private  void Create(){
+      Console.WriteLine($"Nombre del Actor: {Actor.ActorName}");
+      Console.WriteLine($"Nacionalidad: {Actor.Nationality}");
+      Console.WriteLine($"Biografia  : {Actor.Biography}");
+
+   }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

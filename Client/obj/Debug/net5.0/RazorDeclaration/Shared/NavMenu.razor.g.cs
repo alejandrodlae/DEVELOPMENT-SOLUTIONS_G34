@@ -104,7 +104,7 @@ using Sprint3.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "C:\Sprint3\Client\Shared\NavMenu.razor"
+#line 31 "C:\Sprint3\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

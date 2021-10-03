@@ -195,13 +195,13 @@
       "mscorlib.dll": "sha256-7WjHY56PbksCp7YOxNV59r6MqLujjAH8vhnMJ+zVezY=",
       "netstandard.dll": "sha256-5TcSqPhm3fAT6s3NH7+BMGakcfGgZGd3\/\/cVwVs2VPI=",
       "System.Private.CoreLib.dll": "sha256-VJv3DLM\/G0m\/RnTeWL9X8mkbxlsn8nNRhm0BHYEY+uo=",
-      "Sprint3.Shared.dll": "sha256-wkF67XMN4jNd+3g4TlrrTgrvFk0+j0j+gt6wgpvM5Sc=",
-      "Sprint3.Client.dll": "sha256-gFla+QN53O5Ppu9gS2lE+0L6c5meRnY3HAaHQzPdiPQ="
+      "Sprint3.Shared.dll": "sha256-UTe6cYfswVE6Fvw5rIeUiiPkB1pRsGZcy4ubtTCMTX4=",
+      "Sprint3.Client.dll": "sha256-d1y308x50x8jCoTbpXv+rqc7vV6RkJ8fDoqhkqoRCxU="
     },
     "lazyAssembly": null,
     "pdb": {
-      "Sprint3.Shared.pdb": "sha256-awj35MCisfBKbLyg919HmiQ\/3VoShKfns\/299kzz4aw=",
-      "Sprint3.Client.pdb": "sha256-CdfmGzXldMCbmmt+ZrRx1vmfG74v8sdX+9QfpX6djjI="
+      "Sprint3.Shared.pdb": "sha256-Q0\/1eFNrv+rICgRhj6oX\/wDfDtBNNeGH9sODNRNzBrE=",
+      "Sprint3.Client.pdb": "sha256-MhHyx0D\/iERJxX7XJD0UsxN+KQP1Xg4Nd3U79Ju5i5g="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-PvlHrby1PYtdX46ITs6pB8iDNqXNcewh8Eoa\/Gm2+GM=",

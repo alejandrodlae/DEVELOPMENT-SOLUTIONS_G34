@@ -104,7 +104,7 @@ using Sprint3.Client.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Sprint3\Client\Pages\Components\CardMovieComponent.razor"
+#line 27 "C:\Sprint3\Client\Pages\Components\CardMovieComponent.razor"
        
     [Parameter] public List<Movie> Movies { get; set; }
 

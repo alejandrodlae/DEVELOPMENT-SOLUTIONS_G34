@@ -1,13 +1,20 @@
-@page "/actor" 
-@using Sprint3.Client.Pages.Components
-@inject IServiceActor actor
+@page "/actor/show"
 
-<CardActorsComponent Actors="Actors"></CardActorsComponent>
-@code{
-    private List<Actor>Actors;
-        protected override void OnInitialized()
-        {
-            Actors = actor.GetActors();
-        }
+ <div class ="form-inline ">
+    
+<div class="form-group col-1.5">
+    <a href="actor" class="btn btn-info">Listar Actores</a>
+</div>
 
-}"
+<div class="form-group col-2">
+    <a href="actor/search" class="btn btn-success">Buscar Actores</a>
+</div>
+
+<div class="form-group col-1.5">
+    <a href="actor/edit/" class="btn btn-primary">Editar Actor</a>
+</div>
+
+<div class="form-group col-2">
+    <a href="actor/create/" class="btn btn-danger">Crear Actor</a>
+</div>
+</div>

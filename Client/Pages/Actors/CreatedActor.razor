@@ -1,0 +1,14 @@
+@page "/actor/create"
+
+<h1 class="display-4">Crear Actor</h1>
+
+<FormActor OnValidSubmit= "Create" Actor="Actor"></FormActor>
+@code{
+   private Actor Actor = new Actor();
+   private  void Create(){
+      Console.WriteLine($"Nombre del Actor: {Actor.ActorName}");
+      Console.WriteLine($"Nacionalidad: {Actor.Nationality}");
+      Console.WriteLine($"Biografia  : {Actor.Biography}");
+
+   }
+}

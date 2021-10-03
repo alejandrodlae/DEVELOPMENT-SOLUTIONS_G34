@@ -96,13 +96,6 @@ using Sprint3.Client.Services;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Sprint3\Client\Pages\Home.razor"
-using Sprint3.Client.Pages.Components;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Home : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -111,18 +104,6 @@ using Sprint3.Client.Pages.Components;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 7 "C:\Sprint3\Client\Pages\Home.razor"
-      
-    private List<Movie>Movies;
-        protected override void OnInitialized(){
-            Movies = movie.GetMovies();
-        }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceMovie movie { get; set; }
     }
 }
 #pragma warning restore 1591

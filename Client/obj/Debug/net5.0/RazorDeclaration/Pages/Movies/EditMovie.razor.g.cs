@@ -96,6 +96,7 @@ using Sprint3.Client.Services;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Movies/edit/{Id:int}")]
     public partial class EditMovie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -103,6 +104,28 @@ using Sprint3.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 4 "C:\Sprint3\Client\Pages\Movies\EditMovie.razor"
+      
+    [Parameter] public int Id {get;set;}
+    private Movie Movie;
+    protected override void OnInitialized (){
+        Movie = new Movie(){Id =Id, MovieName="Jungle Cruise" , Genre="accion",
+        Synopsis="Descripcion de la pelicula", Raiting = "4", Image="Images/Movie1.jpg"};
+    }
+
+    private void Edit(){
+        Console.WriteLine($"Id: {Movie.Id}");
+        Console.WriteLine($"Nombre: {Movie.MovieName}");
+        Console.WriteLine($"Genero: {Movie.Genre}");
+        Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
+        Console.WriteLine($"Calificacion: {Movie.Raiting}");
+        
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

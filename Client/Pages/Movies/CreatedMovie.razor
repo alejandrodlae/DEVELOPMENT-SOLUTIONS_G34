@@ -1,5 +1,20 @@
 @page "/movies/create"
-<h6>Crear Peliculas</h6>
-@code{
+
+     <h1 class="display-4" >Crear pelicula</h1>
     
+<FormMovie OnValidSubmit= "Create" Movie="Movie"></FormMovie>
+@code{
+   private Movie Movie = new Movie();
+   private  void Create(){
+      Console.WriteLine($"Nombre de la pelicula: {Movie.MovieName}");
+      Console.WriteLine($"Genero: {Movie.Genre}");
+      Console.WriteLine($"Sinopsis  : {Movie.Synopsis}");
+      Console.WriteLine($"Calificacion: {Movie.Raiting}");
+      Console.WriteLine($"Imagen: {Movie.Image}");
+
+   }
+
+
+  
+  
 }

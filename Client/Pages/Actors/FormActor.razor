@@ -1,0 +1,41 @@
+<EditForm Model ="Actor" OnValidSubmit="OnValidSubmit">
+   <DataAnnotationsValidator></DataAnnotationsValidator>
+   <div class="jumbotron">
+   <div class="form-group">
+      <label class="form-label">
+         Actor
+      </label>
+      <div class="mb-3">
+         <InputText class="form-control" @bind-Value="@Actor.ActorName"></InputText>
+         <ValidationMessage For="@(()=>Actor.ActorName)"></ValidationMessage>
+      </div>
+
+
+      <label class="form-label">
+         Nacionalidad
+      </label>
+      <div class="mb-3">
+         <InputText class="form-control" @bind-Value="@Actor.Nationality"></InputText>
+         <ValidationMessage For="@(()=>Actor.Nationality)"></ValidationMessage>
+      </div>
+      
+      <label class="form-label">
+         Biografia
+      </label>
+      <div class="mb-3">
+         <InputText class="form-control" @bind-Value="@Actor.Biography"></InputText>
+         <ValidationMessage For="@(()=>Actor.Biography)"></ValidationMessage>
+      </div>
+   </div>
+
+      
+   </div>
+   <div class ="mb-3">
+      <button type="submit" class="btn btn-success">Guardar</button>
+   </div>
+</EditForm>
+
+@code{
+[Parameter] public Actor Actor{get;set;}
+[Parameter] public EventCallback OnValidSubmit{get;set;}
+}

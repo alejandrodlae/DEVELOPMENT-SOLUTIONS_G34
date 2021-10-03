@@ -96,14 +96,7 @@ using Sprint3.Client.Services;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Sprint3\Client\Pages\Actors\ShowActors.razor"
-using Sprint3.Client.Pages.Components;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/actor")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/actor/show")]
     public partial class ShowActors : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -111,20 +104,6 @@ using Sprint3.Client.Pages.Components;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 6 "C:\Sprint3\Client\Pages\Actors\ShowActors.razor"
-      
-    private List<Actor>Actors;
-        protected override void OnInitialized()
-        {
-            Actors = actor.GetActors();
-        }
-
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IServiceActor actor { get; set; }
     }
 }
 #pragma warning restore 1591

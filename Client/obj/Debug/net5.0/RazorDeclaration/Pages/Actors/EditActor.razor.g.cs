@@ -96,6 +96,7 @@ using Sprint3.Client.Services;
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Actor/edit/{Id:int}")]
     public partial class EditActor : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -103,6 +104,27 @@ using Sprint3.Client.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 4 "C:\Sprint3\Client\Pages\Actors\EditActor.razor"
+      
+    [Parameter] public int Id {get;set;}
+    private Actor Actor;
+    protected override void OnInitialized (){
+        Actor = new Actor(){Id =Id, ActorName="Dave Bautista" , 
+        Nationality="Ingles", Biography = "Biografia"};
+    }
+
+    private void Edit(){
+        Console.WriteLine($"Id: {Actor.Id}");
+        Console.WriteLine($"Nombre: {Actor.ActorName}");
+        Console.WriteLine($"Sinopsis: {Actor.Nationality}");
+        Console.WriteLine($"Calificacion: {Actor.Biography}");
+        
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
