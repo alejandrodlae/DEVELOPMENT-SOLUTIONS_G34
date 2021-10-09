@@ -201,9 +201,12 @@ Fecha:  07 OCTUBRE 2021
 
 Desarrollador LIDER DE PROYECTO: Alejandro
 
-i.   ¿Qué hizo ayer?  
+i.   ¿Qué hizo ayer?  revision del sprint V y sus requerimientos
 
-ii.  ¿Qué hará hoy?
+ii.  ¿Qué hará hoy?  Formularios de las vistas. Vista Movie, Vista Category Vista Actor
+                     Configuracion paquetes dotnet microsoft entity framework
+                     configuracion mysql server express
+                     revision conexion con base de datos
 
 iii. ¿Qué dificultades ha tenido?
 
@@ -259,9 +262,15 @@ Fecha:  08 OCTUBRE 2021
 
 Desarrollador LIDER DE PROYECTO: Alejandro
 
-i.   ¿Qué hizo ayer?  
+i.   ¿Qué hizo ayer? Formularios de las vistas. Vista Movie, Vista Category Vista Actor
+                     Configuracion paquetes dotnet microsoft entity framework
+                     configuracion mysql server express
+                     revision conexion con base de datos
 
-ii.  ¿Qué hará hoy?
+ii.  ¿Qué hará hoy?  Componente form cada Vista. Create Edit Show
+                     presentacion avances del sprint a la profesora DS-34
+                     actualizacion Kanban - Dailymeeting
+                     avance documentacion paso a paso codigo 
 
 iii. ¿Qué dificultades ha tenido?
 
@@ -289,9 +298,9 @@ iii. ¿Qué dificultades
 
 Desarrollador ADMINISTRACION DE CONFIGURACION: Todo el Equipo
 
-i.   ¿Qué hizo ayer? 
+i.   ¿Qué hizo ayer? github revision branches
 
-ii.  ¿Qué hará hoy?
+ii.  ¿Qué hará hoy?  manejo de versiones
 
 iii. ¿Qué dificultades ha tenido?
 
