@@ -1,0 +1,34 @@
+@page "/movies/create"
+@inject NavigationManager navigationManager
+@using Sprint3.Client.Pages.Components
+
+<h6 class="display-4" >Crear peliculas</h6>
+<FormMovie Movie="Movie" OnValidSubmit="Create" CategoriasNoSeleccionadas="CategoriasNoSeleccionadas"></FormMovie>
+@code {
+    private Movie Movie = new Movie();
+    private List<Genre> CategoriasNoSeleccionadas = new List<Genre>();
+
+    protected override void OnInitialized()
+    {
+        CategoriasNoSeleccionadas = new List<Genre>(){
+new Genre(){Id = 1, Name="Comedia"},
+new Genre(){Id = 2, Name="Terror"},
+new Genre(){Id = 3, Name="Ciencia Ficción"},
+new Genre(){Id = 4, Name="Documentales"},
+new Genre(){Id = 5, Name="Comedia"}
+};
+    }
+    void Create()
+    {
+        @* Con el navigationManager vamos a redireccionar al usuario a otras rutas dentro del sistema *@
+        Console.WriteLine(navigationManager.Uri);
+        navigationManager.NavigateTo("movie");
+        Console.WriteLine($"Pelicula: {Movie.MovieName}");
+        Console.WriteLine($"Premier: {Movie.MovieReleaseDate}");
+        Console.WriteLine($"Esta en cartelera: {Movie.Raiting}");
+        Console.WriteLine($"Poster: {Movie.Image}");
+        Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
+
+    }
+}
+  

@@ -1,0 +1,25 @@
+@page "/movies/edit/{Id:int}"
+@using Sprint3.Client.Pages.Components
+
+<h6 class="display-4" >Editar peliculas</h6>
+<FormMovie Movie="Movie" OnValidSubmit="Edit"></FormMovie>
+@code {
+    [Parameter] public int Id { get; set; }
+    private Movie Movie;
+    protected override void OnInitialized()
+    {
+        Movie = new Movie()
+        {
+            MovieName = "El juego del calamar",
+            Synopsis = "Sinopsis...",
+            
+        };
+    }
+    void Edit()
+    {
+        Console.WriteLine($"Pelicula: {Movie.MovieName}");
+        Console.WriteLine($"Premier: {Movie.MovieReleaseDate}");
+        Console.WriteLine($"Poster: {Movie.Image}");
+        Console.WriteLine($"Sinopsis: {Movie.Synopsis}");
+    }
+}

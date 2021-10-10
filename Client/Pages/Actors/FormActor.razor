@@ -1,0 +1,87 @@
+@using Sprint3.Client.Pages.Components
+@using Sprint3.Client.Model
+<EditForm Model="Actor" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+
+   
+    <div class="container">
+        <div class="jumbotron">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col col-sm-9">
+                       <label>Nombre del Actor/Actriz</label>
+                        @* Input para ingresar el nombre de la pelicula *@
+                        <InputText class="form-control" @bind-Value="@Actor.ActorName"></InputText>
+                        <ValidationMessage For="@(()=>Actor.ActorName)"></ValidationMessage>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                       <label>Fecha de Nacimiento</label>
+                        <div class="form-group">
+                            @* Fecha de lanzamiento*@
+                            <InputDate class="form-control" @bind-Value="@Actor.DateOfBirth"></InputDate>
+                            <ValidationMessage For="@(()=>Actor.DateOfBirth)"></ValidationMessage>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* Sinopsis de la pelicula... descripción *@
+            <div class="form-group">
+               <label>Biografia</label>
+                <InputTextArea class="form-control" @bind-Value="@Actor.Biography"></InputTextArea>
+                <ValidationMessage For="@(()=>Actor.Biography)"></ValidationMessage>
+            </div>
+            @* Selección de categorías *@
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label>Selecciona las Peliculas</label>
+                        <div>
+                            <SelectorMultiple Seleccionados="Seleccionados" NoSeleccionados="NoSeleccionados">
+                            </SelectorMultiple>
+                        </div>
+                    </div>
+                    <div class="col">
+                        @*Image => Imagen de la pelicula *@
+                        <div class="form-group">
+                            <ImageComponent Label="" ImageSelected="ImageSelected" ImageURL=""></ImageComponent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">Aceptar</button>
+            <button type="submit" class="btn btn-danger">Cancelar</button>
+
+        </div>
+    </div>
+</EditForm>
+@code {
+    [Parameter] public Actor Actor { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    [Parameter] public List<Movie> CategoriasSeleccionadas { get; set; } = new List<Movie>();
+    [Parameter] public List<Movie> CategoriasNoSeleccionadas { get; set; } = new List<Movie>();
+
+    private string posterTemporal;
+    private List<SelectorMultipleModel> NoSeleccionados { get; set; } = new List<SelectorMultipleModel>();
+
+    private List<SelectorMultipleModel> Seleccionados { get; set; } = new List<SelectorMultipleModel>();
+
+    private void ImageSelected(string imageB64)
+    {
+        Actor.Image = imageB64;
+    }
+
+    protected override void OnInitialized()
+    {
+        Seleccionados = CategoriasSeleccionadas.Select(x => new SelectorMultipleModel(x.Id.ToString(), x.MovieName)).ToList();
+        NoSeleccionados = CategoriasNoSeleccionadas.Select(x => new SelectorMultipleModel(x.Id.ToString(), x.MovieName)).ToList();
+        if (!string.IsNullOrWhiteSpace(Actor.Image))
+        {
+            posterTemporal = Actor.Image;
+            Actor.Image = null;
+        }
+    }
+}

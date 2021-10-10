@@ -1,0 +1,8 @@
+@page "/Genres/create"
+<FormGenre OnValidSubmit= "Create" Genre="Genre"></FormGenre>
+@code{
+   private Genre Genre = new Genre();
+   private  void Create(){
+      Console.WriteLine($"Nombre del Genero: {Genre.Name}");
+   }
+}

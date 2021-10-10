@@ -1,0 +1,42 @@
+@page "/actor/create"
+@inject NavigationManager navigationManager
+@using Sprint3.Client.Pages.Components
+
+<h6 class="display-4" >Crear Actor</h6>
+<FormActor Actor="Actor" OnValidSubmit="create" CategoriasNoSeleccionadas="CategoriasNoSeleccionadas"></FormActor>
+@code{
+   private Actor Actor = new Actor();
+   private List<Movie> CategoriasNoSeleccionadas = new List<Movie>();
+
+    protected override void OnInitialized()
+    {
+        CategoriasNoSeleccionadas = new List<Movie>(){
+           new Movie(){Id = 1, MovieName="Jungle Cruise"},
+           new Movie(){Id = 2, MovieName="Spiderman"},
+           new Movie(){Id = 3, MovieName="Rapido y furioso 9"},
+           new Movie(){Id = 4, MovieName="Vanguard"},
+           new Movie(){Id = 5, MovieName="Free guy"},
+           new Movie(){Id = 6, MovieName="Duro de Cuidar 2"},
+           new Movie(){Id = 7, MovieName="Son como niños"},
+           new Movie(){Id = 8, MovieName="Atentado en el estadio"}
+
+
+
+    };
+    }
+
+
+   void create(){
+      Console.WriteLine(navigationManager.Uri);
+      navigationManager.NavigateTo("Actor");
+      Console.WriteLine($"Nombre del Actor: {Actor.ActorName}");
+      Console.WriteLine($"Nacionalidad: {Actor.Nationality}");
+      Console.WriteLine($"Biografia  : {Actor.Biography}");
+      Console.WriteLine($"Fecha de nacimiento: {Actor.DateOfBirth}");
+      Console.WriteLine($"Image: {Actor.Image}");
+   }
+    }
+
+    
+
+

@@ -1,0 +1,14 @@
+@page "/movies/"
+
+@using Sprint3.Client.Pages.Components
+@inject IServiceMovie movie 
+    <h6 class="display-4" >Mostrar peliculas</h6>
+    <CardMovieComponent Movies ="Movies"></CardMovieComponent>
+
+@code{
+    private List<Movie>Movies;
+        protected override void OnInitialized()
+        {
+            Movies = movie.GetMovies();
+        }
+}

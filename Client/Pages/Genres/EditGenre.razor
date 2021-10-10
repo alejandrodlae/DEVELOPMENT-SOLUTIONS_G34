@@ -1,0 +1,19 @@
+@page "/genres/edit/{Id:int}"
+<div class="jumbotron">
+     <h6 class="display-4" >Editar pelicula</h6>
+     </div>
+<FormGenre OnValidSubmit= "Edit" Genre="Genre"></FormGenre>
+@code{
+    [Parameter] public int Id {get;set;}
+    private Genre Genre;
+    protected override void OnInitialized (){
+        Genre = new Genre(){Id =Id, Name="Comedia"};
+    }
+
+    private void Edit(){
+        Console.WriteLine($"Id: {Genre.Id}");
+        Console.WriteLine($"Genero: {Genre.Name}");
+
+    }
+
+}
